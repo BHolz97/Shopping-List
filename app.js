@@ -8,8 +8,9 @@ app.use(bodyParser.urlencoded({
   }));
 
 app.set("view engine", "ejs");
+app.use(express.static("public"));
 
-let items = [];
+let items = ["Click '+' to add a new item", "<--- Click here to cross off an item"];
 
 app.get("/", function(req, res){
     res.render("index.ejs", {

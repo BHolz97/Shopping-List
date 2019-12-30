@@ -1,23 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Shopping List</title>
 </head>
+
 <body>
 
-    <ul>
-       <% for(let i = 0; i < newItems.length; i++){ %>
-            <li><%=newItems[i]%></li>
-       <% } %>
-    </ul>
+    <div class="blurred-box">
 
-    <form action="/" method="post">
-        <input type="text" name="item">
-        <button type="submit">Add</button>
-    </form>
-    
+        <div class="container">
+
+            <h1>Holz Family Shopping</h1>
+
+            <% for(let i = 0; i < newItems.length; i++){ %>
+            <p><%=newItems[i]%></p>
+            <% } %>
+
+            <div class="addForm">
+                <form action="/" method="post">
+                    <input class="item" type="text" name="item">
+                    <button type="submit">Add</button>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
 </body>
+
 </html>
